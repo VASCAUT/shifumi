@@ -49,15 +49,24 @@ body{
     color: white;
     font-size:1em;
 }
+.bgbutton :hover{
+    background-color: orangered;
+    padding : 20px;
+    border-radius: 8px;
+}
 
 /* Partie SylV */
+a:hover{
+    text-decoration: none;
+}
+.orangered{
+    color : orangered;
+}
 .Fipps{
     font-family: "Fipps-Regular";
-    color : orangered;
 }
 .Retro{
     font-family: "RetroGaming";
-    color : orangered; 
 }
 .miniature{
     width:50%;
@@ -67,4 +76,27 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+.bgorange{
+    background-color: orangered;
+    color : white;
+}
+.right{
+    display:flex;
+    flex-direction :row-reverse;
+}
+.bggreenyellow{
+    background-color: greenyellow;
+}
+.bgred{
+    background-color: red;
+}
+.bgdarkred{
+    background-color: darkred;
+}
+.punk{
+    height : 50px;
+}
+.daft{
+    height : 50px;
 }

@@ -11,21 +11,63 @@
 <title>PFC Fight - Game</title>
 </head>
 <body>
+
 <section id="BGgame">
+
 <header class="container-fluid"><!-- Barres de vie -->
     <div class="col-12">
     <div class="row">
         <div class="col-2">
             <img src="assets/img/dafthead.png" alt="daft">
         </div>
-        <div class="col-3"><!-- Barre de vie de Daft-->
+        <div class="col-3 column">
+            <div class="row">
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+            </div><!-- Barre de vie -->
+            <div class="row orangered Retro" id="joueur"></div>
         </div>
         <div class="col-2 text-center">
             <h1 class="display-1 Fipps">VS</h1>
+            <button type="button" class="btn bgorange Retro mt-5" data-toggle="modal" data-target="#Modal">
+                Play Game
+              </button>
+              <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title Fipps text-white" id="ModalLabel">Player :</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input type="post" class="form-control Retro" id="player">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn bgorange Retro" data-dismiss="modal" id="start">Start !</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <button type="button" class="btn btn-primary Retro mt-5"><a href="game.html">Restart</a></button>
         </div>
-        <div class="col-3"><!-- Barre de vie de Daft-->
+        <div class="col-3 column">
+            <div class="row">
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+            </div><!-- Barre de vie -->
+            <div class="row orangered right Retro" ><h2>Ordinateur</h2></div>
         </div>
-        <div class="col-2">
+        <div class="col-2 right">
             <img src="assets/img/punkhead.png" alt="punk">
         </div>
     </div>
@@ -40,12 +82,12 @@
                 <img src="assets/img/daftfeuille.png"class="miniature" alt="Daft feuille">
                 <img src="assets/img/daftciseaux.png" class="miniature" alt="daft ciseaux">
             </div>
-            <div class="col-4 offset-2 bg-ring text-center">
-                <h2 class="Retro text-center mt-4">Fight !</h2>
+            <div class="col-4 offset-2 bg-ring text-center mt-5">
+                <h2 class="Retro fight text-center mt-4">Fight !</h2>
             </div>
             <div class="col-2 offset-2 column text-center mt-5"><!-- Punk Pierre Feuille Ciseaux -->
                 <img src="assets/img/punkpoing.png" class="miniature" alt="Punk poing">
-                <img src="assets/img/punkciseaux.png"class="miniature" alt="Punk feuille">
+                <img src="assets/img/punkfeuille.png"class="miniature" alt="Punk feuille">
                 <img src="assets/img/punkciseaux.png" class="miniature" alt="Punk ciseaux">
             </div>
         </div>
@@ -55,10 +97,10 @@
 <!-- résultat : % victoire-->   
 </footer>
 </section>
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
