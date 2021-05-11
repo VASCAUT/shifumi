@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Fipps-Regular";
+    src: url(../font/Fipps-Regular.otf);
+}
+@font-face {
+    font-family: "RetroGaming";
+    src: url(../font/RetroGaming.ttf);
+}
+body{
+    width : 99%;
+    min-height : 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+#BGaccueil{
+    background-image: url(../img/accueil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height : 100vh;
+}
+#BGgame{
+    background-image: url(../img/disco.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height : 100vh;
+}
+/*.row {
+    border: 1px solid #7451EB;
+    padding: 3px;
+  }
+  [class^="col"] {
+    padding: 1rem;
+    border: 2px solid #3FA5DB;
+  }
+/* Partie Momo */
+#titre{
+    font-family: retroGaming;
+    font-size: 10em;
+    color: orangered;
+}
+
+.lol{
+    font-family: retroGaming;
+    color:orangered;
+    font-size: 2em;
+}
+.lol2{
+    font-family: retroGaming;
+    color: white;
+    font-size:1em;
+}
+
+/* Partie SylV */
+.Fipps{
+    font-family: "Fipps-Regular";
+    color : orangered;
+}
+.Retro{
+    font-family: "RetroGaming";
+    color : orangered; 
+}
+.miniature{
+    width:50%;
+}
+.bg-ring{
+    background-image: url(..//img/ring.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
