@@ -6,24 +6,38 @@ $(function(){
     var counterL=0;
     var ordiLife = 6;
     var playerLife = 6;
+    var sound;
+    var victory;
+    victory = new Audio();
+    victory.src = "assets/sound/victoire.mp3", preload="auto";
+    var loose;
+    loose = new Audio();
+    loose.src = "assets/sound/loose.mp3", preload="auto";
+    var validation;
+    validation = new Audio();
+    validation.src = "assets/sound/validation.mp3", preload="auto";
 
-    $(".draggable").draggable({revert:true,});
+    $(".draggable").draggable({revert:true});
     $(".droppable").droppable({
         drop: function(event,ui){
         choice = $(ui.draggable).attr('id');
         console.log(choice);}
         });
+    
+    $('button, a').mouseenter(function(){
+        validation.play();
+    })
 
     $('#cache').click(function(){
     var steeve = new Audio();
-    steeve.src = "assets/sound/steeveaustin.mp3";
+    steeve.src = "assets/sound/steeveaustin.mp3", preload="auto";
     steeve.play();
     console.log('click)');
     $('#regles').removeClass('d-none');
     });
 
     $('#start').click(function(){
-    var sound= new Audio();
+    sound= new Audio();
     sound.src="assets/sound/game.mp3";
     sound.loop=true;
     var name=$('#player').val();
@@ -36,58 +50,83 @@ $(function(){
     $('.punk, .daft, #fight').removeClass('d-none');
     });
 
-    $('#Pierre').mousedown(function(){
+    $('#Pierre').mouseover(function(){
         $("#Pierre").attr("src", "assets/img/daftpoinghover.png");
     })
-    $('#Pierre').mouseup(function(){
+    $('#Pierre').mouseleave(function(){
         $("#Pierre").attr("src", "assets/img/daftpoing.png");
     })
-    $('#Feuille').mousedown(function(){
+    $('#Feuille').mouseover(function(){
         $("#Feuille").attr("src", "assets/img/daftfeuillehover.png");
     })
-    $('#Feuille').mouseup(function(){
+    $('#Feuille').mouseleave(function(){
         $("#Feuille").attr("src", "assets/img/daftfeuille.png");
     })
-    $('#Ciseaux').mousedown(function(){
+    $('#Ciseaux').mouseover(function(){
         $("#Ciseaux").attr("src", "assets/img/daftciseauxhover.png");
     })
-    $('#Ciseaux').mouseup(function(){
+    $('#Ciseaux').mouseleave(function(){
         $("#Ciseaux").attr("src", "assets/img/daftciseaux.png");
     })
 
     $('#fight').click(function(){
+        var x;
+        var y;
+        x = $(this).offset().left;
+        y = $(this).offset().top;
+        
         var value = Math.floor(Math.random()*3);   
         if (value<1){
-            ordi = "Pierre";}
+            ordi = "Pierre";
+            $("#punkPDiv").animate({right: x});
+
+        }
         else if(value<2){
-            ordi = "Feuille";}
+            ordi = "Feuille";
+
+        }
         else{
-            ordi="Ciseaux";}
+            ordi="Ciseaux";
+        
+        }
         console.log(ordi);
         console.log(`Player : ${choice} / CPU : ${ordi}`)
         if(ordi==choice){
-                console.log("draw")}
+                console.log("draw");
+                $('#battle').html('<h2 class="Retro Fipps">DRAW</h2>');}
         else if (ordi=="Pierre"&&choice=="Feuille"){
                 console.log('player win');
                 counterW++;
+                $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
+                $("#punk").toggle("pulsate");
+                $("#punk").toggle("pulsate");
                 console.log(counterW);
                 ordiLife = 6 - counterW;
                 console.log(`Player Life : ${playerLife} / CPU life : ${ordiLife}`)}
         else if (ordi=="Feuille"&&choice=="Ciseaux"){
                 console.log('player win');
+                $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
                 counterW++;
+                $("#punk").toggle("pulsate");
+                $("#punk").toggle("pulsate");
                 console.log(counterW);
                 ordiLife = 6 - counterW;
                 console.log(`Player Life : ${playerLife} / CPU life : ${ordiLife}`)}
         else if (ordi=="Ciseaux"&&choice=="Pierre"){
                 console.log('player win')
                 counterW++;
+                $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
+                $("#punk").toggle("pulsate");
+                $("#punk").toggle("pulsate");
                 console.log(counterW);
                 ordiLife = 6 - counterW;
                 console.log(`Player Life : ${playerLife} / CPU life : ${ordiLife}`)}
         else {
                 console.log('player lose')
                 counterL++;
+                $('#battle').html('<h2 class="Retro Fipps">YOU LOSE</h2>');
+                $("#daft").toggle("pulsate");
+                $("#daft").toggle("pulsate");
                 console.log(counterL);
                 playerLife = 6 - counterL;
                 console.log(`Player Life : ${playerLife} / CPU life : ${ordiLife}`)}
@@ -124,9 +163,12 @@ $(function(){
             $('.punk4').addClass('d-none');
             $('.punk5').addClass('d-none');
             $('.punk6').addClass('d-none');
-            var x = (counterW/(counterW+counterL))*100;
-            var result = x.toFixed(2);
-            alert('YOU WIN avec '+result+ '% de victoires')}
+            var res = (counterW/(counterW+counterL))*100;
+            var result = res.toFixed(2);
+            sound.pause();
+            victory.play();
+            alert('YOU WIN avec '+result+ '% de victoires');
+            }
         else{}
         if(playerLife==5){
             $('.daft1').addClass('d-none')}
@@ -161,7 +203,10 @@ $(function(){
             $('.daft4').addClass('d-none');
             $('.daft5').addClass('d-none');
             $('.daft6').addClass('d-none');
-            alert('YOU LOSE')}
+            sound.pause();
+            loose.play();
+            alert('YOU LOSE');
+            }
         else{}
     })
 
