@@ -24,7 +24,7 @@ body{
     background-size: cover;
     min-height : 100vh;
 }
-/*.row {
+.row {
     border: 1px solid #7451EB;
     padding: 3px;
   }
@@ -81,7 +81,7 @@ a:hover{
     background-color: orangered;
     color : white;
 }
-.right{
+.Ctre{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -100,4 +100,8 @@ a:hover{
 }
 .daft{
     height : 50px;
+}
+.right{
+    display: flex;
+    flex-direction : row-reverse;
 }

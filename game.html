@@ -17,19 +17,19 @@
 <header class="container-fluid"><!-- Barres de vie -->
     <div class="col-12">
     <div class="row">
-        <div class="col-2 right">
+        <div class="col-2 Ctre">
             <img src="assets/img/dafthead.png" alt="daft">
         </div>
         <div class="col-3 column">
             <div class="row">
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
-                <div class="col-2 daft d-none bggreenyellow mt-5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft6"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft5"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft4"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft3"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft2"></div>
+                <div class="col-2 daft d-none bggreenyellow mt-5 daft1"></div>
             </div><!-- Barre de vie -->
-            <div class="row orangered Retro right" id="joueur"></div>
+            <div class="row orangered Retro Ctre" id="joueur"></div>
         </div>
         <div class="col-2 text-center">
             <h1 class="display-1 Fipps">VS</h1>
@@ -57,17 +57,17 @@
             <button type="button" class="btn btn-primary Retro mt-5"><a href="game.html">Restart</a></button>
         </div>
         <div class="col-3 column">
-            <div class="row">
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
-                <div class="col-2 punk d-none bggreenyellow mt-5"></div>
+            <div class="row right">
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk6"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk5"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk4"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk3"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk2"></div>
+                <div class="col-2 punk d-none bggreenyellow mt-5 punk1"></div>
             </div><!-- Barre de vie -->
-            <div class="row orangered right Retro" ><h2>Ordinateur</h2></div>
+            <div class="row orangered Ctre Retro" ><h2>Ordinateur</h2></div>
         </div>
-        <div class="col-2 right">
+        <div class="col-2 Ctre">
             <img src="assets/img/punkhead.png" alt="punk">
         </div>
     </div>
@@ -78,17 +78,19 @@
     <div class="col-12">
         <div class="row">
             <div class="col-2 column text-center mt-5"><!-- Daft Pierre Feuille Ciseaux -->
-                <img src="assets/img/daftpoing.png" class="miniature draggable" alt="Daft poing" id="daftP">
-                <img src="assets/img/daftfeuille.png"class="miniature draggable " alt="Daft feuille" id="daftF">
-                <img src="assets/img/daftciseaux.png" class="miniature draggable" alt="daft ciseaux" id="daftC">
+                <img src="assets/img/daftpoing.png" class="miniature draggable" alt="Daft poing" id="Pierre">
+                <img src="assets/img/daftfeuille.png"class="miniature draggable " alt="Daft feuille" id="Feuille">
+                <img src="assets/img/daftciseaux.png" class="miniature draggable" alt="daft ciseaux" id="Ciseaux">
             </div>
             <div class="col-4 offset-2 bg-ring text-center mt-5 droppable">
-                <h2 class="Retro fight text-center mt-4">Fight !</h2>
+              <button type="button" id="fight" class="btn btn-warning Retro fight text-center mt-4 d-none">
+                Fight !
+              </button>
             </div>
             <div class="col-2 offset-2 column text-center mt-5"><!-- Punk Pierre Feuille Ciseaux -->
-                <img src="assets/img/punkpoing.png" class="miniature" alt="Punk poing">
-                <img src="assets/img/punkfeuille.png"class="miniature" alt="Punk feuille">
-                <img src="assets/img/punkciseaux.png" class="miniature" alt="Punk ciseaux">
+                <img src="assets/img/punkpoing.png" class="miniature" alt="Punk poing" id="punkP">
+                <img src="assets/img/punkfeuille.png"class="miniature" alt="Punk feuille" id="punkF">
+                <img src="assets/img/punkciseaux.png" class="miniature" alt="Punk ciseaux" id="punkC">
             </div>
         </div>
     </div>
