@@ -3,7 +3,12 @@ $(function(){
 /* Partie Momo */
 
 /* Partie SylV */
+
+
 $('#cache').click(function(){
+    var steeve = new Audio();
+    steeve.src = "assets/sound/steeveaustin.mp3";
+    steeve.play();
     console.log('click)');
     $('#regles').removeClass('d-none');
 })
