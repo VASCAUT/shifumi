@@ -83,7 +83,8 @@ a:hover{
 }
 .right{
     display:flex;
-    flex-direction :row-reverse;
+    align-items: center;
+    justify-content: center;
 }
 .bggreenyellow{
     background-color: greenyellow;
