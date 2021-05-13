@@ -131,7 +131,7 @@ a:hover{
     display: flex;
     flex-direction : row-reverse;
 }
-@media screen AND (min-width: 768px) AND (orientation: portrait){
+@media screen AND (max-width: 1400px){
     html {
         transform: rotate(-90deg);
         transform-origin: left top;
@@ -142,4 +142,19 @@ a:hover{
         top: 100%;
         left: 0;
       }
+    #titre{
+        font-size:8em;
+    }
+    #punk{
+        width : 80%;
+    }
+    #daft{
+        width : 80%;
+    }
+    .versus{
+        font-size: x-large;
+    }
+    button{
+        width : 90%;
+    }
 }
