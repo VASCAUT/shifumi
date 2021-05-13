@@ -31,6 +31,9 @@ $(function(){
     var punch;
     punch = new Audio();
     punch.src = "assets/sound/punch.mp3", preload="auto";
+    var impact;
+    impact = new Audio();
+    impact.src = "assets/sound/impact.mp3", preload="auto";
 
     $(".draggable").draggable({revert:true});
     $(".droppable").droppable({
@@ -63,7 +66,8 @@ $(function(){
     sound.play();     
     $('h1').addClass('orangered');
     $('#joueur').html('<h2>'+player+'</h2>');
-    $('.punk, .daft, #fight').removeClass('d-none');
+    $('.punk, .daft, #fight, .cache').removeClass('d-none');
+    $(".mask").addClass('d-none');
     });
 
     $('#Pierre').mouseover(function(){
@@ -90,7 +94,6 @@ $(function(){
         var y;
         x = $(this).offset().left;
         y = $(this).offset().top;*/
-        
         var value = Math.floor(Math.random()*3);   
         if (value<1){
             ordi = "Pierre";
@@ -153,7 +156,7 @@ $(function(){
         else {
                 console.log('player lose')
                 counterL++;
-                ouch.play();
+                impact.play();
                 $('#battle').html('<h2 class="Retro Fipps">YOU LOSE</h2>');
                 $("#daft").toggle("pulsate");
                 $("#daft").toggle("pulsate");
