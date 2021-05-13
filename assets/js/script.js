@@ -96,7 +96,9 @@ $(function(){
     })
 
     $('#fight').click(function(){
-
+        $('#punkP').removeClass('punkP');
+        $('#punkC').removeClass('punkC');
+        $('#punkF').removeClass('punkF');
         /*var x;
         var y;
         x = $(this).offset().left;
@@ -109,20 +111,23 @@ $(function(){
             $("#punkF").attr("src", "assets/img/punkfeuille.png");
             $("#punkC").attr("src", "assets/img/punkciseaux.png");
             $('#punkChoice').html('<h2>Pierre</h2>');
+            $('#punkP').addClass('punkP');
         }
         else if(value<2){
             ordi = "Feuille";
             $("#punkF").attr("src", "assets/img/punkfeuillehover.png");
             $("#punkP").attr("src", "assets/img/punkpoing.png");
             $("#punkC").attr("src", "assets/img/punkciseaux.png");
-            $('#punkChoice').html('<h2>Feuille</h2>')
+            $('#punkChoice').html('<h2>Feuille</h2>');
+            $('#punkF').addClass('punkF');
         }
         else{
             ordi="Ciseaux";
             $("#punkC").attr("src", "assets/img/punkciseauxhover.png");
             $("#punkP").attr("src", "assets/img/punkpoing.png");
             $("#punkF").attr("src", "assets/img/punkfeuille.png");
-            $('#punkChoice').html('<h2>Ciseaux</h2>')
+            $('#punkChoice').html('<h2>Ciseaux</h2>');
+            $('#punkC').addClass('punkC');
         }
         console.log(ordi);
         console.log(`Player : ${choice} / CPU : ${ordi}`)
