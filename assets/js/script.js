@@ -16,12 +16,28 @@ $(function(){
     var validation;
     validation = new Audio();
     validation.src = "assets/sound/validation.mp3", preload="auto";
+    var ko;
+    ko = new Audio();
+    ko.src = "assets/sound/ko.mp3", preload="auto";
+    var ouch;
+    ouch = new Audio();
+    ouch.src = "assets/sound/ouch.mp3", preload="auto";
+    var blade;
+    blade = new Audio();
+    blade.src = "assets/sound/blade.mp3", preload="auto";
+    var paper;
+    paper = new Audio();
+    paper.src = "assets/sound/paper.mp3", preload="auto";
+    var punch;
+    punch = new Audio();
+    punch.src = "assets/sound/punch.mp3", preload="auto";
 
     $(".draggable").draggable({revert:true});
     $(".droppable").droppable({
         drop: function(event,ui){
         choice = $(ui.draggable).attr('id');
-        console.log(choice);}
+        console.log(choice);
+        $('#joueurChoice').html('<h2>'+choice+'</h2>');}
         });
     
     $('button, a').mouseenter(function(){
@@ -70,33 +86,44 @@ $(function(){
     })
 
     $('#fight').click(function(){
-        var x;
+        /*var x;
         var y;
         x = $(this).offset().left;
-        y = $(this).offset().top;
+        y = $(this).offset().top;*/
         
         var value = Math.floor(Math.random()*3);   
         if (value<1){
             ordi = "Pierre";
-            $("#punkPDiv").animate({right: x});
-
+            /*$("#punkPDiv").animate({right: x});*/
+            $("#punkP").attr("src", "assets/img/punkpoinghover.png");
+            $("#punkF").attr("src", "assets/img/punkfeuille.png");
+            $("#punkC").attr("src", "assets/img/punkciseaux.png");
+            $('#punkChoice').html('<h2>Pierre</h2>');
         }
         else if(value<2){
             ordi = "Feuille";
-
+            $("#punkF").attr("src", "assets/img/punkfeuillehover.png");
+            $("#punkP").attr("src", "assets/img/punkpoing.png");
+            $("#punkC").attr("src", "assets/img/punkciseaux.png");
+            $('#punkChoice').html('<h2>Feuille</h2>')
         }
         else{
             ordi="Ciseaux";
-        
+            $("#punkC").attr("src", "assets/img/punkciseauxhover.png");
+            $("#punkP").attr("src", "assets/img/punkpoing.png");
+            $("#punkF").attr("src", "assets/img/punkfeuille.png");
+            $('#punkChoice').html('<h2>Ciseaux</h2>')
         }
         console.log(ordi);
         console.log(`Player : ${choice} / CPU : ${ordi}`)
         if(ordi==choice){
                 console.log("draw");
+                ouch.play();
                 $('#battle').html('<h2 class="Retro Fipps">DRAW</h2>');}
         else if (ordi=="Pierre"&&choice=="Feuille"){
                 console.log('player win');
                 counterW++;
+                paper.play();
                 $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
                 $("#punk").toggle("pulsate");
                 $("#punk").toggle("pulsate");
@@ -107,6 +134,7 @@ $(function(){
                 console.log('player win');
                 $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
                 counterW++;
+                blade.play();
                 $("#punk").toggle("pulsate");
                 $("#punk").toggle("pulsate");
                 console.log(counterW);
@@ -115,6 +143,7 @@ $(function(){
         else if (ordi=="Ciseaux"&&choice=="Pierre"){
                 console.log('player win')
                 counterW++;
+                punch.play();
                 $('#battle').html('<h2 class="Retro Fipps">YOU WIN</h2>');
                 $("#punk").toggle("pulsate");
                 $("#punk").toggle("pulsate");
@@ -124,6 +153,7 @@ $(function(){
         else {
                 console.log('player lose')
                 counterL++;
+                ouch.play();
                 $('#battle').html('<h2 class="Retro Fipps">YOU LOSE</h2>');
                 $("#daft").toggle("pulsate");
                 $("#daft").toggle("pulsate");
@@ -166,8 +196,19 @@ $(function(){
             var res = (counterW/(counterW+counterL))*100;
             var result = res.toFixed(2);
             sound.pause();
+            ko.play();
             victory.play();
-            alert('YOU WIN avec '+result+ '% de victoires');
+            if(result<100){
+            alert('YOU WIN avec '+result+ '% de victoires')}
+            else {
+                $("#BGgame").removeClass('BGgame');
+                $("#BGgame").addClass('BGgamebis');
+                var kamehameha;
+                kamehameha = new Audio();
+                kamehameha.src = "assets/sound/kamehameha.mp3", preload="auto";
+                kamehameha.play();
+                alert('YOU WIN avec 100% de victoires!')
+            }
             }
         else{}
         if(playerLife==5){

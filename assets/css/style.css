@@ -18,8 +18,13 @@ body{
     background-size: cover;
     min-height : 100vh;
 }
-#BGgame{
+.BGgame{
     background-image: url(../img/disco.gif);
+}
+.BGgamebis{
+    background-image: url(../img/surpriseGif.gif);
+}       
+#BGgame{
     background-repeat: no-repeat;
     background-size: cover;
     min-height : 100vh;
@@ -57,6 +62,26 @@ body{
 #regles{font-size:xx-large;
 background-color : rgba(255, 255, 255, 0.1);}
 /* Partie SylV */
+footer{
+    position: relative;
+    bottom:0;
+    margin-top: 200px;
+    display : flex;
+    align-items: center;
+    justify-content:center;
+}
+#joueurChoice{
+    display : flex;
+    align-items: center;
+    justify-content:center;
+    color : blue;
+}
+#punkChoice{
+    display : flex;
+    align-items: center;
+    justify-content:center;
+    color : red;
+}
 a:hover{
     text-decoration: none;
 }
@@ -79,7 +104,7 @@ a:hover{
     background-position: center;
 }
 .bgorange{
-    background-color: orangered;
+    background-color: #ff4500;
     color : white;
 }
 .Ctre{
@@ -106,6 +131,15 @@ a:hover{
     display: flex;
     flex-direction : row-reverse;
 }
-footer{
-    height : 200px;
+@media screen AND (min-width: 768px) AND (orientation: portrait){
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
 }

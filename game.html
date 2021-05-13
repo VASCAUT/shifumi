@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Quand les Daftpunks se retrouvent pour jouer au Shifumi!"/>
+<link rel="shortcut icon" href="assets/img/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/slate/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -12,7 +13,7 @@
 </head>
 <body>
 
-<section id="BGgame">
+<section id="BGgame" class="BGgame">
 
 <header class="container-fluid"><!-- Barres de vie -->
     <div class="col-12">
@@ -87,16 +88,19 @@
                 <img src="assets/img/daftciseaux.png" class="miniature draggable" alt="daft ciseaux" id="Ciseaux"></div>
             </div>
           </div>
-            <div class="col-4 offset-2 bg-ring text-center mt-5 droppable">
+          <div class="col-2 Fipps" id=joueurChoice></div>
+            <div class="col-4 bg-ring text-center mt-5 droppable">
               <button type="button" id="fight" class="btn btn-warning Retro fight text-center mt-4 d-none">
                 Fight !
               </button>
               <div class="row Ctre orangered" id="battle"></div>
             </div>
-            <div class="col-2 offset-2 column text-center mt-5" id="test"><!-- Punk Pierre Feuille Ciseaux -->
+            <div class="col-2 Fipps" id=punkChoice></div>
+            <div class="col-2 column text-center mt-5" id="test"><!-- Punk Pierre Feuille Ciseaux -->
 
               <div class="row">
-                <div id="punkPDiv" class="col-12 column text-center" ><img src="assets/img/punkpoing.png" id="punkP" class="miniature" alt="Punk poing"></div>
+                <div id="punkPDiv" class="col-12 column text-center" >
+                  <img src="assets/img/punkpoing.png" id="punkP" class="miniature" alt="Punk poing"></div>
               </div>
               <div class="row">
                 <div class="col-12 column text-center"><img src="assets/img/punkfeuille.png" id="punkF" class="miniature" alt="Punk feuille"></div>
@@ -108,8 +112,9 @@
     </div>
 </main>
 <footer>
-<!-- résultat : % victoire-->   
+  <h5 class="orangered">Momms & SylV Production ©</h5>
 </footer>
+
 </section>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
