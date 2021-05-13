@@ -95,8 +95,7 @@ a:hover{
     font-family: "RetroGaming";
 }
 .miniature{
-    width:50%;
-}
+    width:50%;}
 .bg-ring{
     background-image: url(..//img/ring.png);
     background-repeat: no-repeat;
@@ -131,6 +130,9 @@ a:hover{
     display: flex;
     flex-direction : row-reverse;
 }
+
+
+
 @media screen AND (max-width: 1400px){
     html {
         transform: rotate(-90deg);

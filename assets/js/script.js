@@ -35,7 +35,13 @@ $(function(){
     impact = new Audio();
     impact.src = "assets/sound/impact.mp3", preload="auto";
 
-    $(".draggable").draggable({revert:true});
+    $(".draggable").draggable({
+        revert: function () {
+            $(this).delay(1500);
+            return true
+        },
+        revertDuration: 700
+    });
     $(".droppable").droppable({
         drop: function(event,ui){
         choice = $(ui.draggable).attr('id');
@@ -90,6 +96,7 @@ $(function(){
     })
 
     $('#fight').click(function(){
+
         /*var x;
         var y;
         x = $(this).offset().left;
