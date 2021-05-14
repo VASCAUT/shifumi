@@ -209,7 +209,7 @@ $(function(){
             $('.punk5').addClass('d-none');
             $('.punk6').addClass('d-none');
             var res = (counterW/(counterW+counterL))*100;
-            var result = res.toFixed(2);
+            var result =res.toFixed(2);
             sound.pause();
             ko.play();
             victory.play();

@@ -1,40 +1,38 @@
 @font-face {
     font-family: "Fipps-Regular";
-    src: url(../font/Fipps-Regular.otf);
-}
+    src: url(../font/Fipps-Regular.otf);}
 @font-face {
     font-family: "RetroGaming";
-    src: url(../font/RetroGaming.ttf);
-}
+    src: url(../font/RetroGaming.ttf);}
+.margintop{
+    margin-top: 50px;}
 body{
     width : 99%;
     min-height : 100vh;
     margin-left: auto;
-    margin-right: auto;
-}
+    margin-right: auto;}
 #BGaccueil{
     background-image: url(../img/accueil.jpg);
+    width:100%;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height : 100vh;
-}
+    min-height : 100vh;}
 .BGgame{
     background-image: url(../img/disco.gif);
-}
+    width:100%;}
 .BGgamelose{
     background-image: url(../img/disco.gif);
-}
+    width:100%;}
 .BGgamewin{
     background-image: url(../img/giphy.gif);
-}
+    width:100%;}
 .BGgamebis{
     background-image: url(../img/surpriseGif.gif);
-}       
+    width:100%;}       
 #BGgame{
     background-repeat: no-repeat;
     background-size: cover;
-    min-height : 100vh;
-}
+    min-height : 100vh;}
 /*.row {
     border: 1px solid #7451EB;
     padding: 3px;
@@ -47,24 +45,19 @@ body{
 #titre{
     font-family: retroGaming;
     font-size: 10em;
-    color: orangered;
-}
-
+    color: orangered;}
 .lol{
     font-family: retroGaming;
     color:orangered;
-    font-size: 2em;
-}
+    font-size: 2em;}
 .lol2{
     font-family: retroGaming;
     color: white;
-    font-size:1em;
-}
+    font-size:1em;}
 .bgbutton :hover{
     background-color: orangered;
     padding : 20px;
-    border-radius: 8px;
-}
+    border-radius: 8px;}
 #regles{font-size:xx-large;
 background-color : rgba(255, 255, 255, 0.1);}
 /* Partie SylV */
@@ -74,71 +67,56 @@ footer{
     margin-top: 200px;
     display : flex;
     align-items: center;
-    justify-content:center;
-}
+    justify-content:center;}
 #joueurChoice{
     display : flex;
     align-items: center;
     justify-content:center;
-    color : blue;
-}
+    color : blue;}
 #punkChoice{
     display : flex;
     align-items: center;
     justify-content:center;
-    color : red;
-}
+    color : red;}
 a:hover{
-    text-decoration: none;
-}
+    text-decoration: none;}
 .orangered{
-    color : orangered;
-}
+    color : orangered;}
 .Fipps{
-    font-family: "Fipps-Regular";
-}
+    font-family: "Fipps-Regular";}
 .Retro{
-    font-family: "RetroGaming";
-}
-.miniature{
+    font-family: "RetroGaming";}
+.miniature1{
+    width:50%;}
+.miniature2{
     width:50%;}
 .bg-ring{
     background-image: url(..//img/ring.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-}
+    background-position: center;}
 .favicon{
-    width : 80%;
-}
+    width : 80%;}
 .bgorange{
     background-color: #ff4500;
-    color : white;
-}
+    color : white;}
 .Ctre{
     display:flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center;}
 .bggreenyellow{
-    background-color: greenyellow;
-}
+    background-color: greenyellow;}
 .bgred{
-    background-color: red;
-}
+    background-color: red;}
 .bgdarkred{
-    background-color: darkred;
-}
+    background-color: darkred;}
 .punk{
-    height : 50px;
-}
+    height : 50px;}
 .daft{
-    height : 50px;
-}
+    height : 50px;}
 .right{
     display: flex;
-    flex-direction : row-reverse;
-}
+    flex-direction : row-reverse;}
 .punkP{
     transform : translate(0,0);
     animation-name: animpunkP;
@@ -146,11 +124,9 @@ a:hover{
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;}
-
 @keyframes animpunkP {
     0% {transform: translate(0, 0);}
-    100% {transform: translate(-750px, 80px);}}
-
+    100% {transform: translate(-750px, 100px);}}
 .punkF{
     transform : translate(0,0);
     animation-name: animpunkF;
@@ -158,72 +134,49 @@ a:hover{
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;}
-    
 @keyframes animpunkF {
      0% {transform: translate(0, 0);}
     100% {transform: translate(-750px, 0);}}
-
 .punkC{
     transform : translate(0,0);
     animation-name: animpunkC;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-delay: 0s;
-    animation-iteration-count: 1;}
-        
+    animation-iteration-count: 1;}       
 @keyframes animpunkC {
     0% {transform: translate(0, 0);}
     100% {transform: translate(-750px, -80px);}}
+.mobaffiche{
+    display:none;}
 
-@media screen AND (max-width: 1400px){
-    #daftdiv {
-        display : none;
-    }
-    #punkdiv {
-        display : none;
-    }
-    .vsdiv{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    }
-    .vsdiv2{
-    flex-direction: column;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    }
-    .versus{
-        display : none;
-    }
-    @keyframes animpunkC {
-        0% {transform: translate(0, 0);}}
-    @keyframes animpunkF {
-        0% {transform: translate(0, 0);}}
-    @keyframes animpunkP {
-        0% {transform: translate(0, 0);}}
-    #arene{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .punk{
-        height : 20px;
-    }
-    .daft{
-        height : 20px;
-    }
-    .arene2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row;
-    }
-    .miniature{
-        width:200%;}
-    .arene3{
-        display: flex;
 
-        }
-    }
+@media screen AND (max-width:720px){
+#titre{
+    font-size: 5em;}
+#daft{
+    width:100%;}
+.mobcache{
+    display:none;}
+#punk{
+    width:100%;}
+.mobaffiche{
+    display:block;}
+.arene3{
+    display: flex;
+    flex-direction:row;}
+@keyframes animpunkP {
+    100% {transform: translate(0, 0);}}
+@keyframes animpunkF {
+    100% {transform: translate(0, 0);}}
+@keyframes animpunkC {
+    100% {transform: translate(0, 0);}}
+.droppable{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;}
+.arene2{
+    margin-top: 50px;
+}
+    
+}
