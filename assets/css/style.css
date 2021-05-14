@@ -21,6 +21,12 @@ body{
 .BGgame{
     background-image: url(../img/disco.gif);
 }
+.BGgamelose{
+    background-image: url(../img/disco.gif);
+}
+.BGgamewin{
+    background-image: url(../img/giphy.gif);
+}
 .BGgamebis{
     background-image: url(../img/surpriseGif.gif);
 }       
@@ -169,31 +175,3 @@ a:hover{
     0% {transform: translate(0, 0);}
     100% {transform: translate(-750px, -80px);}}
 
-@media screen AND (max-width: 1400px) AND (orientation : portrait){
-    html {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh;
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        cursor : pointer;
-      }
-    #titre{
-        font-size:8em;
-    }
-    #punk{
-        width : 80%;
-    }
-    #daft{
-        width : 80%;
-    }
-    .versus{
-        font-size: x-large;
-    }
-    button{
-        width : 90%;
-    }
-}

@@ -214,9 +214,12 @@ $(function(){
             ko.play();
             victory.play();
             $('.win').removeClass('d-none');
-            $('#battle').addClass('d-none');
+            $('#battle, #fight').addClass('d-none');
+            $('#stat').html('<h2>Taux de victoire : '+result+'%</h2>');
             if(result<100){
-            alert('YOU WIN avec '+result+ '% de victoires')}
+                $("#BGgame").removeClass('BGgame');
+                $("#BGgame").addClass('BGgamewin');
+            }
             else {
                 $("#BGgame").removeClass('BGgame');
                 $("#BGgame").addClass('BGgamebis');
@@ -224,7 +227,6 @@ $(function(){
                 kamehameha = new Audio();
                 kamehameha.src = "assets/sound/kamehameha.mp3", preload="auto";
                 kamehameha.play();
-                alert('YOU WIN avec 100% de victoires!')
             }
             }
         else{}
@@ -264,8 +266,9 @@ $(function(){
             sound.pause();
             loose.play();
             $('.lose').removeClass('d-none');
-            $('#battle').addClass('d-none');
-            alert('YOU LOSE');
+            $("#BGgame").removeClass('BGgame');
+            $("#BGgame").addClass('BGgamelose');
+            $('#battle, #fight').addClass('d-none');
             }
         else{}
     })
