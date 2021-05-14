@@ -213,6 +213,8 @@ $(function(){
             sound.pause();
             ko.play();
             victory.play();
+            $('.win').removeClass('d-none');
+            $('#battle').addClass('d-none');
             if(result<100){
             alert('YOU WIN avec '+result+ '% de victoires')}
             else {
@@ -261,6 +263,8 @@ $(function(){
             $('.daft6').addClass('d-none');
             sound.pause();
             loose.play();
+            $('.lose').removeClass('d-none');
+            $('#battle').addClass('d-none');
             alert('YOU LOSE');
             }
         else{}
