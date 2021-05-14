@@ -175,3 +175,55 @@ a:hover{
     0% {transform: translate(0, 0);}
     100% {transform: translate(-750px, -80px);}}
 
+@media screen AND (max-width: 1400px){
+    #daftdiv {
+        display : none;
+    }
+    #punkdiv {
+        display : none;
+    }
+    .vsdiv{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .vsdiv2{
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .versus{
+        display : none;
+    }
+    @keyframes animpunkC {
+        0% {transform: translate(0, 0);}}
+    @keyframes animpunkF {
+        0% {transform: translate(0, 0);}}
+    @keyframes animpunkP {
+        0% {transform: translate(0, 0);}}
+    #arene{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .punk{
+        height : 20px;
+    }
+    .daft{
+        height : 20px;
+    }
+    .arene2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row;
+    }
+    .miniature{
+        width:200%;}
+    .arene3{
+        display: flex;
+
+        }
+    }
