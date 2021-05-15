@@ -72,7 +72,7 @@ $(function(){
     sound.play();     
     $('h1').addClass('orangered');
     $('#joueur').html('<h2>'+player+'</h2>');
-    $('.punk, .daft, #fight, .cache').removeClass('d-none');
+    $('.punk, .daft, #fight, .cache, .versus').removeClass('d-none');
     $(".mask").addClass('d-none');
     });
 

@@ -149,6 +149,12 @@ a:hover{
     100% {transform: translate(-750px, -80px);}}
 .mobaffiche{
     display:none;}
+.orange{
+    color:orange;
+}
+.bold{
+    font-weight: bold;
+}
 
 
 @media screen AND (max-width:720px){
@@ -177,6 +183,12 @@ a:hover{
     justify-content: space-between;}
 .arene2{
     margin-top: 50px;
+}
+#joueurChoice{
+    height : 50px;
+}
+#punkChoice{
+    height : 50px;
 }
     
 }
