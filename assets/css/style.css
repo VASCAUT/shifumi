@@ -33,7 +33,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height : 100vh;}
-.row {
+/*.row {
     border: 1px solid #7451EB;
     padding: 3px;
   }
