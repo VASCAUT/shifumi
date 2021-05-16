@@ -33,7 +33,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height : 100vh;}
-/*.row {
+.row {
     border: 1px solid #7451EB;
     padding: 3px;
   }
@@ -120,7 +120,7 @@ a:hover{
 .punkP{
     transform : translate(0,0);
     animation-name: animpunkP;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;}
@@ -130,7 +130,7 @@ a:hover{
 .punkF{
     transform : translate(0,0);
     animation-name: animpunkF;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;}
@@ -140,7 +140,7 @@ a:hover{
 .punkC{
     transform : translate(0,0);
     animation-name: animpunkC;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;}       
