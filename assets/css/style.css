@@ -152,8 +152,8 @@ a:hover{
 .orange{
     color:orange;
 }
-.bold{
-    font-weight: bold;
+.toto{
+    border : solid 1px red;
 }
 
 
@@ -190,5 +190,20 @@ a:hover{
 #punkChoice{
     height : 50px;
 }
+.mediacolonn{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    width : 80%;
+}
+#win{
+    width:75%;
+}
+#lose{
+    width:75%;}
+#stat{
+    display : none;
+}
+
     
 }
